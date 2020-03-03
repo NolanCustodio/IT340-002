@@ -1,0 +1,50 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+
+#Vagrant.configure("2") do |config|
+#   config.vm.box = "bento/ubuntu-18.04"
+#   config.vm.network "public_network"
+#   config.vm.synced_folder "./data", "/vagrant_data"
+#   config.vm.define :VagrantFilesLabVM
+#   config.vm.provider "virtualbox" do |vb|
+#     vb.gui = false
+
+  #   # Customize the amount of memory on the VM:
+#     vb.memory = "512"
+#     vb.name = "FileHunterLab"
+#   end
+#
+#  config.vm.define "machine1" do |vm1|
+#    vm1.vm.box = "bento/ubuntu-18.04"
+#  end
+#	
+#  config.vm.define "machine2" do |vm2|
+#    vm2.vm.box = "bento/ubuntu-18.04"  
+#  end
+#
+#   config.vm.provision "shell", inline: <<-SHELL
+#     apt-get update
+#     wget http://web.njit.edu/~mt85/IT340/vagrant_files_lab.sh
+#     chown vagrant:vagrant vagrant_files_lab.sh
+#     chmod 775 vagrant_files_lab.sh
+#     echo "vagrant" | sudo -S bash vagrant_files_lab.sh
+#   SHELL
+#end
+
+Vagrant.configure("2") do |config|
+  config.vm.provision "shell", inline: "echo Hello"
+  config.vm.box = "bento/ubuntu-18.04"
+
+  config.vm.define "machine1", primary: true do |vm1|
+    vm1.vm.box = "bento/ubuntu-18.04"
+  end
+	
+  config.vm.define "machine2" do |vm2|
+    vm2.vm.box = "bento/ubuntu-18.04"  
+  end
+end
