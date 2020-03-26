@@ -1,0 +1,33 @@
+    1 sudo apt-get install postfix mailutils -y
+    2 sudo nano /etc/postfix/sasl_passwd
+    3 sudo chmod 600 /etc/postfix/sasl_passwd
+    4 sudo nano /etc/postfix/main.cf
+    5 sudo postmap /etc/postfix/sasl_passwd
+    6 sudo nano /etc/aliases
+    7 sudo ufw allow 587
+    8 sudo systemctl restart postfix
+    9 echo "Postfix email" | mail -s "Email from `hostname`" root
+   10 sudo nano /etc/aliases
+   11 sudo nano /etc/postfix/main.cf
+   12 sudo nano /etc/postfix/sasl_passwd
+   13 echo "Postfix email" | mail -s "Email from `hostname`" nolanvongoop28@gmail.com
+   14 echo "Postfix email" | mail -s "Email from `hostname`" root
+   15 sudo ufw satus
+   16 sudo ufw allow 587
+   17 sudo nano /etc/postfix/sasl_passwd
+   18 sudo chmod 600 /etc/postfix/sasl_passwd
+   19 ls -l /etc/postfix//sasl_passwd
+   20 sudo nano /etc/postfix/main.cf
+   21 sud postmap sasl_passwd
+   22 sudo postmap sasl_passwd
+   23 sudo postmap /etc/postfix/sasl_password
+   24 sudo postmap /etc/postfix/sasl_passwd
+   25 sudo nano /etc/aliases
+   26 sudo newaliases
+   27 sudo systemctl restart postfix
+   28 echo "Postfix email" | mail -s "Email from `hostname`" root
+   29 echo "Postfix email" | mail -s "Email from `hostname`" nolanvongoop28@gmail.com
+   30 cat History | nano myhistory.txt
+   31 History | nano myhistory.txt
+   32 history
+   33 history | nano myhistory.txt
