@@ -1,0 +1,25 @@
+    1  logout
+    2  sudo apt install -y bind9 bind9utils bind9-doc dnsutils
+    3  sudo nano /etc/bind/named.conf.local
+    4  ifconfig
+    5  sudo nano /etc/bind/named.conf.local
+    6  sudo cp /etc/bind/db.local /etc/bind/forward.nolan.local.db
+    7  sudo nano /etc/bind/forward.nolan.local.db
+    8  sudo cp /etc/bind/db.127 /etc/bind/reverse.nolan.local.db
+    9  sudo nano /etc/bind/reverse.nolan.local.db
+   10  sudo named-checkconf
+   11  sudo named-checkzone hostname.local /etc/bind/forward.hostname.local.db
+   12  sudo named-checkzone nolan.local /etc/bind/forward.nolan.local.db
+   13  named-checkzone 101.0.168.192.in-addr.arpa /etc/bind/reverse.nolan.local.db
+   14  sudo systemctl restart bind9
+   15  sudo systemctl enable bind9
+   16  sudo systemctl status bind9
+   17  git clone https://github.com/NolanCustodio/IT340-002.git
+   18  ls
+   19  nano history.txt
+   20  ls
+   21  nano history.txt
+   22  ls
+   23  cat history
+   24  history
+   25  history > history.txt
