@@ -1,0 +1,15 @@
+[Unit]
+Description=Java Service
+
+[Service]
+User=nobody
+# The configuration file application.properties should be here:
+WorkingDirectory=/data
+ExecStart=/home/vagrant/scripts/startUp.sh
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
